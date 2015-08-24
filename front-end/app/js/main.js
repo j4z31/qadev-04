@@ -6,6 +6,7 @@ var sayHello = function () {
     var message = "Hi New World ...";
     console.log(message);
 
+    // JUEVES 13 AGOSTO
     // Las lineas 6 y 7 solo se ejecutan cuando el metodo es llamado
     //sayHello
 
@@ -41,4 +42,33 @@ var Person = function(name, age){
     this.sayHello = function(){
         console.log("Hello, my name is: " + this.name);
     };
+}
+
+/**
+ * Viernes 14 agosto
+ * a las funciones se les puede enviar o no varios argumentos
+ * sayHello(), sayHello('Paco', 123), sayHello(123)
+ * y aun siguen funcionando
+ **/
+
+/**
+ * VARIABLES AND CONTEXT
+ **/
+
+    //CONTEXTOS
+var age = '';
+function calculateAge(bornYear){
+    var age = 2015 - bornYear;
+    return age;
+}
+
+var age = '';
+function calculateAge(bornYear){
+    // Toda variable que no lleva var
+    // es definido x defecto de forma global
+    // del objeto Window
+    age = 2015 - bornYear;
+    return age;
+
+    // Condejo siempre usar VAR
 }

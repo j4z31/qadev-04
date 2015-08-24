@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<code>
+    var getNumberOddAndEven = function(number){
+    var resOdd = 'Numbers Odd: ';
+    var resEven = 'Numbers Even: ';
+    var cont = 1;
+    while (cont <= number*2)
+    {
+    if(cont % 2 == 0){
+    resEven += cont + ', ';
+    cont ++;
+    continue;
+    }
+
+    resOdd += cont + ', ';
+
+    /*if(cont % 2 != 0){
+    resOdd += cont + ', ';
+    cont ++;
+    continue;
+    }*/
+    }
+
+    var res = resEven + ' - ' + resOdd;
+    return res;
+    };
+</code>
+</body>
+</html>

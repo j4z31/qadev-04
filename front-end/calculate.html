@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <code>
+        var CalculatorOperations = function(){
+        /*
+        Method add numbers
+        */
+        this.getAdd = function(){
+        if (arguments!== undefined && arguments.length > 1)
+        return getSum(arguments);
+        return 0;
+        };
+
+        /*
+        Private Method, invocate to getAdd
+        */
+        var getSum = function(numbers, pos){
+        if(pos===undefined){
+        pos = numbers.length -1;
+        }
+        if(pos == 0)
+        //return currentVal;
+        return numbers[pos];
+
+        return numbers[pos] + getSum(numbers, pos -1);
+        };
+
+        /*
+        Method displayed the greater number
+        */
+        this.getGreaterNumber = function(){
+        if (arguments !== undefined && arguments.length > 1)
+        return getMaxNumber(arguments);
+        return 0;
+        };
+
+        /*
+        Private Method, invocate to getGreaterNumber
+        */
+        var getMaxNumber = function(numbers, pos, max){
+        if(pos===undefined){
+        pos = numbers.length -1;
+        }
+
+        if(max ===undefined || numbers[pos]>max){
+        max = numbers[pos];
+        }
+
+        if(pos == 0){
+        return max;
+        }else{
+        return getMaxNumber(numbers, pos -1, max);
+        }
+        };
+
+        /*
+        Method displayed the lower number
+        */
+        this.getLowerNumber = function(){
+        if (arguments !== undefined && arguments.length > 1)
+        return getMinNumber(arguments);
+        return 0;
+        };
+
+        /*
+        Private Method, invocate to getGreaterNumber
+        */
+        var getMinNumber = function(numbers, pos, min){
+        if(pos===undefined){
+        pos = numbers.length -1;
+        }
+
+        if(min ===undefined || numbers[pos]<min){
+        min = numbers[pos];
+        }
+
+        if(pos == 0){
+        return min;
+        }else{
+        return getMinNumber(numbers, pos -1, min);
+        }
+        };
+
+        /*
+        Method with get average
+        */
+        this.getAverage = function(){
+        if (arguments !== undefined && arguments.length > 1)
+        return (getAvg(arguments)/arguments.length);
+        return 0;
+        };
+
+        var getAvg = function(){
+        if (arguments[0] !== undefined && arguments[0].length > 1)
+        return getSum(arguments[0]);
+        return 0;
+        };
+        };
+
+    </code>
+</body>
+</html>
